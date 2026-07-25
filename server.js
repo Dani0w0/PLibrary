@@ -4,6 +4,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
+console.log("PORT:", process.env.PORT);
+console.log("MONGO:", process.env.MONGO_URI);
 require("./db-connection");
 
 const apiRoutes = require("./routes/api.js");
