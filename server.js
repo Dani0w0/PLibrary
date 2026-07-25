@@ -4,8 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
-console.log("PORT:", process.env.PORT);
-console.log("MONGO:", process.env.MONGO_URI);
 require("./db-connection");
 
 const apiRoutes = require("./routes/api.js");
@@ -13,6 +11,7 @@ const fccTestingRoutes = require("./routes/fcctesting.js");
 const runner = require("./test-runner");
 
 const app = express();
+
 
 app.use("/public", express.static(process.cwd() + "/public"));
 
